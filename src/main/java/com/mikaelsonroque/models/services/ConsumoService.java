@@ -39,9 +39,24 @@ public class ConsumoService {
                 }
             }
         }
-        return "Ano: " + anoDoMaiorGastoMensal + ", mes: " + mesMaiorGasto + ", valor: " + valorGasto;
+        return "Ano: " + anoDoMaiorGastoMensal + ", mes: " + mesMaiorGasto + ", valor: R$" + valorGasto;
     }
 
+    public String calcularMaiorGastoAnual(ConsumoHistorico consumoHistorico){
+        Integer anoDoMaiorGasto = 0;
+        Double valorGasto = 0.0;
 
+        for (ConsumoAnual consumoAnual : consumoHistorico.getListaConsumo()){
+            Double somaValores = 0.0;
+            for (Double valorMensal : consumoAnual.getMeses().values()){
+                somaValores += valorMensal;
+            }
+            if (somaValores > valorGasto){
+                valorGasto = somaValores;
+                anoDoMaiorGasto = consumoAnual.getAno();
+            }
+        }
+        return "Ano: " + anoDoMaiorGasto + ", valor gasto: R$" + valorGasto;
+    }
 
 }

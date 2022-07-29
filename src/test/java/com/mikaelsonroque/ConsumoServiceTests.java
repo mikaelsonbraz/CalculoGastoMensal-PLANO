@@ -48,7 +48,6 @@ public class ConsumoServiceTests {
 
         //Execução
         HashMap<String, Double> mediaMeses = consumoService.calcularConsumoMedioMensal(consumoHistorico);
-        System.out.println("Media valores gastos mensalmente: " + mediaMeses);
 
         //Verificação
         Assertions.assertThat(mediaMeses).hasSize(12);
@@ -78,7 +77,6 @@ public class ConsumoServiceTests {
 
         //Execução
         String maiorGastoMensal = consumoService.calcularMaiorGastoMensal(consumoHistorico);
-        System.out.println("Ano e mês de maior gasto: " + maiorGastoMensal);
 
         //Verificações
         Assertions.assertThat(maiorGastoMensal).isNotNull();
@@ -99,7 +97,6 @@ public class ConsumoServiceTests {
 
         //Execução
         String maiorGastoAnual = consumoService.calcularMaiorGastoAnual(consumoHistorico);
-        System.out.println("Ano de maior gasto e valor: " + maiorGastoAnual);
 
         //Verificação
         Assertions.assertThat(maiorGastoAnual).isNotNull();

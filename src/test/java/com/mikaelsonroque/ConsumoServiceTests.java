@@ -64,4 +64,24 @@ public class ConsumoServiceTests {
                         consumoAnual2012.getMeses().get("NOV") + consumoAnual2013.getMeses().get("NOV"))
                         / consumoHistorico.getListaConsumo().size());
     }
+
+    @Test
+    @DisplayName("Deve verificar o calculo do mês que houve o maior gasto em energia")
+    public void determinarMaiorGastoMensalTest(){
+        //Cenário
+        consumoAnual2010.setListaMeses(alimentarConsumoMeses());
+        consumoAnual2011.setListaMeses(alimentarConsumoMeses());
+        consumoAnual2012.setListaMeses(alimentarConsumoMeses());
+        consumoAnual2013.setListaMeses(alimentarConsumoMeses());
+        consumoHistorico.setListaConsumo(List.of(consumoAnual2010, consumoAnual2011, consumoAnual2012, consumoAnual2013));
+
+        //Execução
+        String maiorGastoMensal = consumoService.calcularMaiorGastoMensal(consumoHistorico);
+
+        //Verificações
+        Assertions.assertThat(maiorGastoMensal).isNotNull();
+        Assertions.assertThat(maiorGastoMensal).contains("Ano: ");
+        Assertions.assertThat(maiorGastoMensal).contains("mes: ");
+        Assertions.assertThat(maiorGastoMensal).contains("valor: ");
+    }
 }

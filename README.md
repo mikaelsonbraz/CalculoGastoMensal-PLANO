@@ -4,9 +4,10 @@ ______
 
 <h3>Projeto criado para armazenar o código fonte para uma tarefa proposta para o processo seletivo da empresa Plano Consultoria.
 
+
 ______
 
-Foi utilizada a linguagem JAVA e a técnica do TDD além de algus recursos do ecossisteema Spring para desenvolvimento do projeto em duas camadas
+Foi utilizada a linguagem JAVA e a técnica do TDD além de alguns recursos do ecossistema Spring para desenvolvimento do projeto em duas camadas
 
 ______
 

@@ -1,4 +1,4 @@
-package com.mikaelsonroque.models.services;
+package com.mikaelsonroque.services;
 
 import com.mikaelsonroque.models.ConsumoAnual;
 import com.mikaelsonroque.models.ConsumoHistorico;

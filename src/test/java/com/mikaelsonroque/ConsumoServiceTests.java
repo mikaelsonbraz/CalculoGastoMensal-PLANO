@@ -2,7 +2,7 @@ package com.mikaelsonroque;
 
 import com.mikaelsonroque.models.ConsumoAnual;
 import com.mikaelsonroque.models.ConsumoHistorico;
-import com.mikaelsonroque.models.services.ConsumoService;
+import com.mikaelsonroque.services.ConsumoService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

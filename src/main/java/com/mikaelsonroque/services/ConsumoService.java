@@ -3,7 +3,6 @@ package com.mikaelsonroque.services;
 import com.mikaelsonroque.models.ConsumoAnual;
 import com.mikaelsonroque.models.ConsumoHistorico;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class ConsumoService {
